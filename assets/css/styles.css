@@ -1,0 +1,1092 @@
+@charset "utf-8";
+
+/************************************************
+		common
+************************************************/
+header, section, footer, h1, h2, h3, nav, ul, p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+body {
+	background: #fff;
+	color: #333;
+	font-size: 14px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+	margin: 0;
+}
+html {
+	overflow-y: scroll;
+}
+img {
+	border: 0;
+}
+p {
+	line-height: 2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* button common */
+.button {
+	background: #6a1014;
+	border-radius: 7px;
+	color: #fff;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	line-height: 45px;
+	opacity: 1;
+	text-align: center;
+	width: 290px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+	background: #ddb09b;
+}
+
+.button-return {
+	/* background: #ddb09b; */
+	background: #6a1014;
+	border-radius: 30px;
+	color: #fff;
+	display: block;
+	opacity: 0.7;
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	text-decoration: none;
+	margin: 50px auto 0;
+}
+.button-return:hover {
+	opacity: 1.0;
+}
+
+
+/* section common */
+section {
+	padding: 70px 0;
+}
+section .container {
+	margin: 0 auto;
+	width: 900px;
+}
+section h2 {
+	color: #6a1014;
+	font-size: 28px;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	margin: 0 0 30px;
+	text-align: center;
+}
+section:not(.call-to-action)
+h2:after {
+	/* color: #ddb09b; */
+	color: #6a1014;
+	display: block;
+	font-size: 16px;
+	padding-top: 10px;
+}
+section p.section-outline {
+	letter-spacing: 0.2em;
+	margin: 30px;
+	text-align: center;
+	/*background: tomato;*/
+	/*width: 500px;*/
+}
+section p.section-outline .example {
+	/* color: #ddb09b; */
+	color: #6a1014;
+	text-align: center;
+}
+.br::before {
+	content: "\a";
+	white-space: pre;
+}
+
+/************************************************
+	header
+************************************************/
+header {
+	position: relative;
+}
+header h1 .logotype {
+	display: block;
+	height: 70px;
+	padding: 20px 0 20px 20px;
+}
+header .container {
+	background: url('../img/bg2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top: 1px solid #ddd;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2) inset;
+	height: 310px;
+	min-width: 1%;
+	position: relative;
+}
+header .particles-js {
+	background-color:		rgba(255,255,255,0.5);
+	height: 100%;
+	position: absolute;
+		left: 0;
+		top: 0;
+	width: 100%;
+}
+header .header-contents {
+	height: 100%;
+	width: 870px;
+	margin: 0 auto;
+	position: relative;
+}
+header .message {
+	color: #6a1014;
+	font-size: 22px;
+	letter-spacing: 0.25em;
+	position: absolute;
+		top: 18px;
+		left: 0;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+header .message p {
+	margin: 0;
+}
+header .button {
+	-webkit-animation: visible-true 5.0s ease 20.0s 1 forwards;
+					animation: visible-true 5.0s ease 20.0s 1 forwards;
+	opacity: 0;
+	position: absolute;
+		bottom: 18px;
+		left: 70px;
+}
+@-webkit-keyframes visible-true {
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes visible-true {
+	100% {
+		opacity: 1;
+	}
+}
+header .sakai-kinuko {
+	height: 380px;
+	position: absolute;
+		bottom: 0;
+		right: 0;
+}
+header .en {
+	display: block;
+	font-size: 14px;
+	font-weight: 900;
+	line-height: 18px;
+	letter-spacing: 0.1em;
+}
+header .ja {
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 14px;
+}
+
+/* g-navi */
+header .g-navi {
+	display: block;
+	position: absolute;
+		right: 0;
+		top: 30px;
+	text-align: center;
+	z-index: 9999;
+}
+header .g-navi ul {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-end;
+					justify-content: flex-end;
+}
+header .g-navi li {
+	margin-right: 20px;
+}
+header .g-navi a {
+	/* color: #ddb09b; */
+	color: #6a1014;
+	transition: 0.5s color ease;
+}
+header .g-navi a:hover {
+	color:#6a1014;
+}
+
+/* h-menu */
+header .h-menu {
+	background: #fff;
+	border: 1px solid #ddb09b;
+	border-radius: 5px;
+	display: none;
+	height: 45px;
+	width: 45px;
+	position: fixed;
+		top: 10px;
+		right: 10px;
+	z-index: 9999;
+}
+header .h-menu .line-1,
+header .h-menu .line-2,
+header .h-menu .line-3 {
+	background-color: #6a1014;
+	height:2px;
+	width:25px;
+}
+header .h-menu .line-1 {
+	position:absolute;
+		top: 14px;
+		left: 10px;
+}
+header .h-menu .line-2 {
+	position:absolute;
+		top: 22px;
+		left: 10px;
+}
+header .h-menu .line-3 {
+	position:absolute;
+		top: 30px;
+		left: 10px;
+}
+header .h-menu .line-1,
+header .h-menu .line-2,
+header .h-menu .line-3 {
+	transition: all 0.5s ease-out;
+}
+header .h-menu .menu-click1 {
+	top:22px;
+	transform: rotate(405deg);
+}
+header .h-menu .menu-click2 {
+	background-color:rgba(255,255,255,0);
+}
+header .h-menu .menu-click3 {
+	top:22px;
+	transform: rotate(-405deg);
+}
+header .h-g-navi {
+	visibility: hidden;
+	position: fixed;
+		top: 0px;
+		left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 9000;
+}
+header .h-g-navi ul {
+	display: block;
+	opacity: 0.9;
+	padding: 0;
+}
+header .h-g-navi li {
+	background: #6a1014;
+	border-top: 1px solid #ddd;
+	color: #ddb09b;
+	padding-top: 17px;
+	height: 47px;
+	width: 100%;
+}
+header .h-g-navi a {
+	color: #fff;
+}
+header .h-g-navi a:hover {
+	color:#fff;
+}
+header .h-g-navi .ja br {
+	display: none;
+}
+
+/************************************************
+	news ( top page )
+************************************************/
+.news {
+	/* background: #ddb09b; */
+	background: #6a1014;
+	color: #fff;
+	font-size: 14px;
+	/*opacity: 0.5;*/
+	position: relative;
+}
+.news .container {
+	margin: 0 auto;
+	width: 80%;
+	/*position: absolute;*/
+	z-index: 9999;
+}
+.news h2 {
+	/*background: tomato;*/
+	font-size: 14px;
+	letter-spacing: 0.2em;
+	position: relative;
+	padding: 11px 11px;
+}
+.news h2 span {
+	position: absolute;
+		right: 11px;
+}
+.news li {
+	border-top: 1px dotted #ddd;
+	padding: 11px 0;
+}
+.news-date {
+	margin: 0 11px;
+}
+.news a {
+	color: #fff;
+}
+
+/************************************************
+	service
+************************************************/
+.service .container {
+	/* width: 100%; */
+	width: 80%;
+}
+.service h2:after {
+	content: '- ネオ・キャストができること -';
+}
+.service-list {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+					flex-direction: row;
+	-webkit-flex-wrap: wrap;
+					flex-wrap: wrap;
+	-webkit-justify-content: center;
+					justify-content: center;
+}
+.service-item {
+	box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.2);
+	/* margin: 10px; */
+	margin: 30px;
+	padding: 0;
+	 /* width: 290px;  */
+	width: 340px;
+}
+.service-item .thumbnail {
+	/* height: 230px; */
+	 height: 280px; 
+	overflow: hidden;
+	position: relative;
+}
+.service-item .thumbnail img {
+	/* height: 230px; */
+	height: 280px;
+	position: absolute;
+		top: 0;
+		left: -3%;
+}
+.service-item .thumbnail h3 {
+	background:	rgba(255,255,255,0.9);
+	color: #6a1014;
+	height: 45px;
+	line-height: 45px; 
+	position: absolute;
+		bottom: 0;
+	text-align: center;
+	width: 100%;
+	/* padding-top: 10px; */
+}
+.service-item .thumbnail h3.multiline {
+	line-height: normal;
+	 padding-top: 2px; 
+}
+.service-item .thumbnail span {
+	display: block;
+	font-size: 12px;
+	margin-top: 0;
+}
+.mentalhealth .thumbnail {
+	background: url('../img/hand-sun.jpg');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+.border-left-clear {
+	border-left: 0;
+}
+/* .service-outline h3 {
+	 color: #6a1014; 
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	padding: 20px 0 10px 0;
+	text-align: center;
+} */
+.service-outline p {
+	color: #333;
+	letter-spacing: 0.1em;
+	padding: 10px 20px 30px 20px;
+	text-align: left;
+}
+
+/************************************************
+	reason
+************************************************/
+.reason {
+	background: #f8f8f8;
+}
+.reason h2:after {
+	content: '- ネオ・キャストが選ばれる理由 -';
+}
+.reason table {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+	font-size: 14px;
+	letter-spacing: 0.2em;
+	width: 100%;
+}
+.reason th, .reason td {
+	background: #6a1014;
+	border: 5px solid #6a1014;
+	text-align: left;
+}
+.reason th {
+	background: #fff;
+	color: #6a1014;
+	padding: 20px;
+	text-align: center;
+	width: 80px;
+}
+.reason th span.reason-no {
+	font-size: 22px;
+}
+.reason td {
+	color: #fff;
+	padding: 20px 5px;
+	text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+.reason td span.reason-kanji {
+	font-size: 22px;
+}
+.reason td span.reason-point {
+	font-size: 22px;
+}
+.reason-item {
+	background: #6a1014;
+	height: 80px;
+	letter-spacing: 0.1em;
+	line-height: 80px;
+	margin: 5px;
+	padding: 5px;
+}
+.reason-item h3 {
+	background: #fff;
+	color: #6a1014;
+	display: inline-block;
+	font-size: 22px;
+	height: 100%;
+	text-align: center;
+	width: 150px;
+}
+.reason-item h3 span {
+	font-size: 14px;
+	padding-right: 5px;
+}
+.reason-item p {
+	background: #777;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	height: 100%;
+	line-height: 80px;
+	margin-left: 5px;
+	text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+.reason-item p span.reason-kanji {
+	font-size: 22px;
+}
+.reason-item p span.reason-point {
+	font-size: 22px;
+}
+
+/************************************************
+	counseling
+************************************************/
+.counseling {
+	background: url('../img/woman_smile1.jpg');
+	background-position: center;
+	background-size: cover;
+	border-top: 1px solid #ddd;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.counseling .counseling-filter {
+	background-color:	rgba(255,255,255,0.8);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.2); 
+	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+}
+.counseling .container {
+	text-align: center;
+}
+.counseling h2:after {
+	content: '- 個人で悩まれている方へ -';
+}
+
+/************************************************
+	coaching
+************************************************/
+.coaching {
+	background: url('../img/coaching.png');
+	background-position: center;
+	background-size: cover;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.coaching .coaching-filter {
+	background-color:	rgba(255,255,255,0.8);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.2); 
+	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+}
+.coaching h2:after {
+	content: '- 目標を達成したい方へ -'
+}
+.coaching .container {
+	text-align: center;
+}
+.coaching p {
+	text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+/************************************************
+	greeting
+************************************************/
+.greeting h2:after {
+	content: '- ごあいさつ -';
+}
+.greeting {
+	background: url('../img/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.greeting .container {
+	background: #fff;
+	box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 50px 100px 60px;
+	position: relative;
+	width: 500px;
+}
+.greeting h3 {
+	color: #6a1014;
+	font-size: 24px;
+	font-weight: normal;
+	margin-bottom: 1.2em;
+}
+.greeting p, .greeting ul {
+	letter-spacing: 0.1em;
+	margin-bottom: 1.2em;
+}
+.greeting ul {
+	color: #6a1014;
+	/*border-bottom: 1px solid #ddb09b;*/
+	/*border-top: 1px solid #ddb09b;*/
+	list-style: disc;
+	padding-left: 40px;
+}
+.greeting li {
+	/*font-size: 14px;*/
+	margin-bottom: 7px;
+}
+
+
+.greeting p.text-right {
+	margin-bottom: 0;
+	margin-right: 100px;
+	text-align: right;
+}
+.greeting .kinuko-sign {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	width: 100%;
+}
+.greeting .sakai-kinuko-sign {
+	height: 50px;
+}
+.greeting .sakai-kinuko {
+	height: 280px;
+	position: absolute;
+		bottom: 0;
+		right: 0;
+}
+
+/************************************************
+	profile
+************************************************/
+/*.sakai-kinuko-container {*/
+	/*text-align: center;*/
+	/*background: tomato;*/
+	/*display: inline-block;*/
+	/*margin: 0 auto;*/
+	/*text-align: center;*/
+/*}*/
+.profile {
+	background: #f8f8f8;
+}
+.profile h2:after {
+	content: '- 講師紹介 -';
+}
+
+
+.profile-flex {
+	margin-top: 20px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+					flex-direction: row;
+	-webkit-flex-wrap: wrap;
+					flex-wrap: wrap;
+	-webkit-justify-content: center;
+					justify-content: center;
+					/*background: #fff;*/
+}
+
+.profile .sakai-kinuko-imgbox {
+	background: #fff;
+	/*display: inline-block;*/
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ddb09b;
+	overflow: hidden;
+		border-radius: 50%;
+	/*text-align: center;*/
+	margin: 0 auto;
+}
+.profile .sakai-kinuko-name {
+	color: #6a1014;
+	font-size: 16px;
+	text-align: center;
+}
+
+.profile img {
+	height: 300px;
+}
+
+.profile .biography {
+	letter-spacing: 0.1em;
+	/*margin: 0 auto;*/
+	width: 550px;
+	/*background: tomato;*/
+	margin-bottom: 20px;
+}
+.profile .biography h3 {
+	color: #6a1014;
+	/*margin: 0;*/
+	padding: 10px 20px 10px;
+}
+.profile .biography h3 span {
+	color: #ddb09b;
+	font-size: 10px;
+	margin-left: 10px;
+}
+.profile .biography table {
+	/*background: #fff;*/
+	border-bottom: 1px solid #ddb09b;
+	border-top: 1px solid #ddb09b;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.profile .biography th {
+	color: #6a1014;
+	vertical-align: top;
+	padding: 10px 10px 0 15px;
+	width: 65px;
+}
+.profile .biography td {
+	padding-top: 10px;
+	padding-right: 20px;
+}
+.profile .biography table .last {
+	padding-bottom: 10px;
+}
+
+.profile .qualification {
+	/*background: skyblue;*/
+	letter-spacing: 0.1em;
+	margin-left: 30px;
+	width: 320px;
+}
+.profile .qualification h3 {
+	color: #6a1014;
+	margin: 0;
+	padding: 10px 20px 10px;
+}
+.profile .qualification h3 span {
+	/* color: #ddb09b; */
+	color: #6a1014;
+	font-size: 10px;
+	margin-left: 10px;
+}
+.profile .qualification ul {
+	border-bottom: 1px solid #ddb09b;
+	border-top: 1px solid #ddb09b;
+	list-style: disc;
+	padding: 10px 20px 10px 40px;
+}
+.profile .qualification ul li {
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+.profile .qualification ul li .reg {
+	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+}
+.profile .qualification ul li:last-child {
+	margin-bottom: 0px;
+}
+.profile .qualification ul p {
+	font-size: 12px;
+	/*padding-right: 40px;*/
+	text-align: right;
+}
+
+
+/************************************************
+	outline
+************************************************/
+.outline {
+	/*background: #f8f8f8;*/
+}
+.outline h2:after {
+	content: '- 会社概要 -';
+}
+.outline table {
+	width: 100%;
+}
+.outline th, .outline td {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	text-align: left;
+}
+.outline th {
+	background: #ffe2cd;
+	color: #6a1014;
+	font-weight: bold;
+}
+
+/************************************************
+	news-list ( news/index.html )
+************************************************/
+.news-list {
+	background: url('../img/bg090_08.gif');
+	opacity: 0.8;
+}
+.news-list h2:after {
+	content: '- お知らせの一覧 -'
+}
+
+.news-list .container {
+	background: #fff;
+	box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 50px 100px 60px;
+	/*position: relative;*/
+	width: 70%;
+}
+
+.news-list ul li {
+	color: #6a1014;
+	border-top: 1px dotted #ddb09b;
+	padding: 15px 0;
+}
+
+.news-list li a {
+	color: #6a1014;
+}
+
+/************************************************
+	news-list ( news/index.html )
+************************************************/
+.detail {
+	background: url('../img/bg090_08.gif');
+	opacity: 0.8;
+}
+.detail .container {
+	background: #fff;
+	box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	padding: 50px 100px 60px;
+	width: 70%;
+}
+.detail h2 {
+	text-align: left;
+	/*font-size: 18px;*/
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddb09b;
+}
+.detail h2 span {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.detail p {
+	letter-spacing: 0.1em;
+	margin-bottom: 1.2em;
+}
+.detail table {
+	width: 100%;
+}
+.detail th, .detail td {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	text-align: left;
+}
+.detail th {
+	background: #ffe2cd;
+	color: #6a1014;
+	font-weight: bold;
+}
+.detail table td, .detail table a {
+	color: #333;
+}
+.detail table a {
+	text-decoration: underline;
+}
+
+/************************************************
+	footer
+************************************************/
+footer {
+	background: #f8f8f8;
+	/* color: #ddb09b; */
+	color: #6a1014;
+	padding: 90px 0;
+	text-align: center;
+}
+footer .fb-container img {
+	height: 30px;
+	margin: 10px;
+}
+
+/************************************************
+	page-top button
+************************************************/
+#page-top {
+	position: fixed;
+		bottom: 20px;
+		right: 20px;
+	opacity: 0.7;
+}
+#page-top a {
+	/* background: #ddb09b; */
+	background: #6a1014;
+	border-radius: 30px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	width: 50px;
+	z-index: 999;
+}
+#page-top:hover {
+	opacity: 1;
+}
+
+/************************************************
+	1440px以上
+************************************************/
+@media (min-width: 1440px) {
+	.service .container {
+		width: 60%;
+	}
+}
+
+/************************************************
+	1100px以下
+************************************************/
+@media (max-width: 1100px) {
+	#g-navi {
+		display: none;
+	}
+	#h-menu {
+		display: block;
+	}
+	#h-g-navi {
+		display: none;
+		visibility: visible;
+	}
+}
+
+/************************************************
+	959px以下
+************************************************/
+@media (max-width: 959px) {
+	section .container {
+		width: 95%;
+		margin: 0 auto;
+	}
+	header .container {
+		height: 250px;
+	}
+	header .header-contents {
+		width: 580px;
+	}
+	header .message {
+		font-size: 18px;
+		position: absolute;
+			top: 10px;
+			left: 0;
+	}
+	header .button {
+		position: absolute;
+			bottom: 12px;
+			left: 40px;
+	}
+	header .sakai-kinuko {
+		height: 320px;
+	}
+	#g-navi {
+		display: none;
+	}
+	#h-menu {
+		display: block;
+	}
+	#h-g-navi {
+		display: none;
+		visibility: visible;
+	}
+	.greeting .container {
+		padding: 50px 10% 60px;
+		width: 60%;
+	}
+	.greeting .qualification ul li {
+		font-size: 10px;
+		margin-bottom: 7px;
+	}
+}
+
+/************************************************
+	599px以下
+************************************************/
+@media (max-width: 599px) {
+	.br::before {
+		content: "";
+		white-space: normal;
+	}
+	section p.section-outline {
+		letter-spacing: 0.2em;
+		margin:955 30px 10px;
+		text-align: left;
+	}
+	header h1 .logotype {
+		display: block;
+		height: 52px;
+		padding: 10px 0 10px 10px;
+	}
+	header .header-contents {
+		width: 360px;
+	}
+	header .message {
+		font-size: 14px;
+		margin-left: 10px;
+		position: absolute;
+			top: 20px;
+			left: 0;
+	}
+	header .button {
+		position: absolute;
+			bottom: 20px;
+	}
+	header .sakai-kinuko {
+		height: 180px;
+	}
+	.news .container {
+		width: 98%;
+	}
+
+	.service .container {
+		 width: 100%; 
+	}
+	.service-item {
+		margin: 10px; 
+		/* width: 290px;  */
+		width: 340px;
+	}
+
+
+	.reason,
+	.reason tr,
+	.reason td,
+	.reason th {display:block;}
+	.reason th {width:auto;}
+	
+	.greeting .container {
+		width: 90%;
+		padding: 50px 5% 60px;
+	}
+	/*.greeting .sakai-kinuko {
+		height: 180px;
+		position: absolute;
+			bottom: 0;
+			right: 0;
+	}
+	.greeting .qualification {
+		letter-spacing: 0.1em;
+		position: relative;
+		width: 100%;
+	}
+	.greeting .qualification h4 {
+		padding: 10px 20px 10px;
+	}
+	.greeting .qualification ul {
+		padding: 10px 90px 10px 20px;
+	}
+	.greeting .qualification ul li {
+		margin-bottom: 7px;
+		font-size: 9px;
+	}
+	.greeting .qualification ul p {
+		font-size: 9px;
+	}*/
+
+	.profile .qualification {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.outline,
+	.outline tr,
+	.outline td,
+	.outline th {display:block;}
+	.outline th {width:auto;}
+
+	.news-list .container {
+		width: 90%;
+		padding: 50px 5% 60px;
+	}
+	.detail .container {
+		padding: 50px 5% 60px;
+		width: 90%;
+	}
+	.detail,
+	.detail tr,
+	.detail td,
+	.detail th {display:block;}
+	.detail th {width:auto;}
+
+
+}
