@@ -325,14 +325,14 @@ header .h-g-navi .ja br {
 }
 .news h2 {
 	/*background: tomato;*/
-	font-size: 14px;
-	letter-spacing: 0.2em;
-	position: relative;
-	padding: 11px 11px;
+	/* font-size: 14px; */
+	/* letter-spacing: 0.2em; */
+	/* position: relaktive; */
+	/* padding: 11px 11px; */
 }
 .news h2 span {
-	position: absolute;
-		right: 11px;
+	/* position: absolute; */
+		/* right: 11px; */
 }
 .news li {
 	margin-bottom: 10px;
@@ -843,7 +843,7 @@ header .h-g-navi .ja br {
 ************************************************/
 .news-list {
 	background: url('../img/bg090_08.gif');
-	opacity: 0.8;
+	/* opacity: 0.8; */
 }
 .news-list h2:after {
 	content: '- お知らせの一覧 -'
