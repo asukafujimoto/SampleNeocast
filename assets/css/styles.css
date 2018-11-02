@@ -1069,6 +1069,10 @@ footer .fb-container img {
 	.news .container {
 		width: 98%;
 	}
+	.news-title {
+		display: block;
+		padding: 10px 0;
+	}
 
 	.service .container {
 		 width: 100%; 
